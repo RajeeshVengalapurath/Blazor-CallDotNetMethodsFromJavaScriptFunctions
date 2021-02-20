@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazor-CallDotNetMethodsFromJavaScriptFunctions", "Blazor-CallDotNetMethodsFromJavaScriptFunctions\Blazor-CallDotNetMethodsFromJavaScriptFunctions.csproj", "{37202B62-9110-4736-A684-C4F21CA29BD3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37202B62-9110-4736-A684-C4F21CA29BD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37202B62-9110-4736-A684-C4F21CA29BD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37202B62-9110-4736-A684-C4F21CA29BD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37202B62-9110-4736-A684-C4F21CA29BD3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {60D325F6-2474-4AA9-9413-CA1AB65E95BA}
+	EndGlobalSection
+EndGlobal

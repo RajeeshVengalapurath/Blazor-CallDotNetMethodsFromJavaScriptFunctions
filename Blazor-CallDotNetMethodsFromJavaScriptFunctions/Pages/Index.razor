@@ -1,0 +1,26 @@
+﻿@page "/"
+<button type="button" class="btn btn-primary"
+        onclick="returnAStringJs()">
+    Trigger .NET static method ReturnAStringAsync
+</button>
+
+@*
+Defined in _Hist.cshtml
+<script type="text/javascript">
+    function returnAStringJs() {
+        DotNet.invokeMethodAsync('Blazor-CallDotNetMethodsFromJavaScriptFunctions', 'ReturnAStringAsync')
+            .then(data => {
+                console.log(data);
+            });
+
+    }
+</script>*@
+
+@code {
+    //[JSInvokable("DifferentMethodName")]
+    [JSInvokable]
+    public static Task<string> ReturnAStringAsync()
+    {
+        return Task.FromResult<string>("rajeesh");
+    }
+}
