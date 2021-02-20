@@ -4,6 +4,11 @@
     Trigger .NET static method ReturnAStringAsync
 </button>
 
+<button type="button" class="btn btn-primary"
+        @onclick="DoInstanceMethodCall">
+    Trigger .NET instance method call person.GetName
+</button>
+
 @*
 Defined in _Hist.cshtml
 <script type="text/javascript">
@@ -18,10 +23,20 @@ Defined in _Hist.cshtml
 *@
 
 @code {
+    [Inject]
+    public IJSRuntime jsRuntime { get; set; }
+
     //[JSInvokable("DifferentMethodName")]
     [JSInvokable]
     public static Task<string> ReturnAStringAsync(string s)
     {
         return Task.FromResult<string>("rajeesh " + s);
+    }
+    public async Task DoInstanceMethodCall()
+    {
+        DotNetObjectReference<Data.Person> person = DotNetObjectReference.Create(new Data.Person());
+
+        await jsRuntime.InvokeAsync<string>("getNameJs", person);
+
     }
 }

@@ -40,6 +40,10 @@
                 });
 
         }
+        function getNameJs(person) {
+            person.invokeMethodAsync('GetName')
+                .then(r => { console.log(r) })            
+        }
     </script>
 </body>
 </html>
