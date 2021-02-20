@@ -34,7 +34,7 @@
     <script src="_framework/blazor.server.js"></script>
     <script type="text/javascript">
         function returnAStringJs() {
-            DotNet.invokeMethodAsync('Blazor-CallDotNetMethodsFromJavaScriptFunctions', 'ReturnAStringAsync')
+            DotNet.invokeMethodAsync('Blazor-CallDotNetMethodsFromJavaScriptFunctions', 'ReturnAStringAsync', 'vengalapurath')
                 .then(data => {
                     console.log(data);
                 });

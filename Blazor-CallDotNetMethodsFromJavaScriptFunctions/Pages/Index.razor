@@ -8,19 +8,20 @@
 Defined in _Hist.cshtml
 <script type="text/javascript">
     function returnAStringJs() {
-        DotNet.invokeMethodAsync('Blazor-CallDotNetMethodsFromJavaScriptFunctions', 'ReturnAStringAsync')
+        DotNet.invokeMethodAsync('Blazor-CallDotNetMethodsFromJavaScriptFunctions', 'ReturnAStringAsync', 'vengalapurath')
             .then(data => {
                 console.log(data);
             });
 
     }
-</script>*@
+</script>
+*@
 
 @code {
     //[JSInvokable("DifferentMethodName")]
     [JSInvokable]
-    public static Task<string> ReturnAStringAsync()
+    public static Task<string> ReturnAStringAsync(string s)
     {
-        return Task.FromResult<string>("rajeesh");
+        return Task.FromResult<string>("rajeesh " + s);
     }
 }
